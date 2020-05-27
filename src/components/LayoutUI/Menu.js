@@ -9,6 +9,7 @@ function Menu({setCurrentPage}) {
         data.pages.map((page,i) => {
           return (
             <span
+              className="menu-item"
               key={i}
               onClick={e => setCurrentPage(page.title)}
               >{page.title}</span>

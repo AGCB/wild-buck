@@ -1,5 +1,4 @@
 .page-ui {
-  border: 3px solid red;
   color: white;
   display: flex;
   flex-direction: column;
@@ -8,11 +7,70 @@
 
 .headline-subhead {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-bottom: 200px;
+  justify-content: space-between;
+  width: 84%;
+  margin-bottom: 40px;
 }
 
 .headline {
+  width: 31%;
+  font-size: 84px;
+  font-family: HelveticaNeue;
+  font-weight: bold;
+  color: white;
+  margin-top: -10px;
+  word-wrap: break-word;
+  line-height: 54px;
+  position: relative;
+  right: 1%;
+}
+
+.subhead {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  color: white;
   width: 30%;
+  line-height: 1.86;
+  position: relative;
+  right: 5%;
+}
+
+.call-to-action {
+  background-color: white;
+  color: black;
+  height: auto;
+  width: 80%;
+  font-family: HelveticaNeue;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 75px 0px 0px 4%;
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  max-height: 170px;
+}
+
+.call-to-action > span {
+  width: 50%;
+  padding-bottom: 75px;
+}
+.lets-talk-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  left: 5%;
+}
+
+.lets-talk-wrapper > * {
+  margin: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: black;
+  font-family: HelveticaNeue;
+}
+
+.right-arrow {
+  position: relative;
+  bottom: 3px;
+  color: #ffc001;
 }

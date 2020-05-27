@@ -8,9 +8,9 @@ function Logo() {
         alt=""
         src="https://f.v1.n0.cdn.getcloudapp.com/items/0C3l1E2v1k3b1a2C0C26/abc_logo.svg"
         style={{
-          "width":"30px",
+          "width":"60px",
           "height":"30px",
-          "backgroundColor":"black"}} />
+        }} />
     </div>
   )
 }

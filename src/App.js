@@ -9,15 +9,21 @@ function App() {
   const currentData = data.pages.filter(page => page.title === currentPage);
   const currentBackgroundImageName = currentData[0].blocks[0].background;
   const backgroundImageUrl = `/images/backgrounds/${currentBackgroundImageName}`;
-  var divStyle = {
-            backgroundImage: 'url(' + backgroundImageUrl + ')'
-        }
+  const backgroundImageStyle = {
+    backgroundRepeat: 'inherit',
+    backgroundImage: 'url(' + backgroundImageUrl + ')'
+  }
+  const currentMenuItem = currentData[0].title
+  console.log('! here are some vars...', currentData);
+
   return (
     <div className="App"
-        style={divStyle}>
+        style={backgroundImageStyle}>
         <LayoutUI
           setCurrentPage={setCurrentPage}
-          data={data}/>
+          data={data}
+          currentMenuItem={currentMenuItem}
+        />
         <PageUI data={currentData}/>
     </div>
   );
