@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import LayoutUI from './components/LayoutUI/LayoutUI.js';
+import PageUI from './components/PageUI/PageUI.js';
+import data from './data.js';
 import './App.css';
 
 function App() {
+  const [currentPage, setCurrentPage] = React.useState("Industries")
+  const currentData = data.pages.filter(page => page.title === currentPage);
+  const currentBackgroundImageName = currentData[0].blocks[0].background;
+  const backgroundImageUrl = `/images/backgrounds/${currentBackgroundImageName}`;
+  var divStyle = {
+            backgroundImage: 'url(' + backgroundImageUrl + ')'
+        }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"
+        style={divStyle}>
+        <LayoutUI
+          setCurrentPage={setCurrentPage}
+          data={data}/>
+        <PageUI data={currentData}/>
     </div>
   );
 }

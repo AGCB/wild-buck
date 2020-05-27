@@ -1,0 +1,18 @@
+.page-ui {
+  border: 3px solid red;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline-subhead {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+.headline {
+  width: 30%;
+}
